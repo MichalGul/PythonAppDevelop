@@ -124,5 +124,5 @@ if __name__ == '__main__':
             print("\033[1m" + "Congratulations! YOU WIN!!!" + "\033[0m")
 
         print(dotted_line)
-        keep_playing = input("Play again? Yes(y)/No(n):")
+        keep_playing = ("Play again? Yes(y)/No(n):")
 

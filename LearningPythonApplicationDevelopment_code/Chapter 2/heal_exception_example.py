@@ -38,7 +38,7 @@ RUNNING THE PROGRAM:
 """
 
 
-from attackoftheorcs_v1_1 import Knight
+from attackoftheorcs_v1_1_current import Knight
 from gameuniterror import GameUnitError
 
 # See the module docstring for details.

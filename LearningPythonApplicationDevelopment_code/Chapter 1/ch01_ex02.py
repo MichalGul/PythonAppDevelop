@@ -183,7 +183,7 @@ def play_game(health_meter):
         while continue_attack:
             continue_attack = input(".......continue attack? (y/n): ")
             if continue_attack == 'n':
-                print_bold("RUNNING AWAY with following health status...")
+                print_bold("RUNNING 3AWAY with following health status...")
                 show_health(health_meter, bold=True)
                 print_bold("GAME OVER!")
                 break
