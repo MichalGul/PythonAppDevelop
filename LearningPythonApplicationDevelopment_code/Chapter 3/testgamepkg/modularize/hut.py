@@ -1,5 +1,21 @@
 class Hut:
-    """Class to create hut object(s) in the game Attack of the Orcs"""
+    """Class to create hut objects in the game Attack of the Orcs
+
+    :arg int number: Hut number to be assigned
+    :arg AbstractGameUnit occupant: The new occupant of the Hut
+
+    :ivar int number: A number assigned to this hut
+    :ivar boolean is_acquired: A boolean flag to indicate if the
+                   hut is acquired. In the current implementation
+                   this is viewed from the player's perspective.
+    :ivar AbstractGameUnit occupant: The occupant of this hut.
+                   Needs to be an instance of the subclass of
+                  `AbstractGameUnit`.
+
+    .. seealso:: Where it is used --
+            :py:meth:`attackoftheorcs.AttackOfTheOrcs.setup_game_scenario`
+    """
+
     def __init__(self, number, occupant):
         self.occupant = occupant
         self.number = number
