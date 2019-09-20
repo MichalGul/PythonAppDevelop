@@ -1,3 +1,4 @@
+
 import random
 from hut import Hut
 from knight import Knight

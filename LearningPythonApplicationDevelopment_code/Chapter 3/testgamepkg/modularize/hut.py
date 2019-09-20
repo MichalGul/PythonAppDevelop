@@ -1,3 +1,5 @@
+from gameutils import print_bold
+
 class Hut:
     """Class to create hut objects in the game Attack of the Orcs
 

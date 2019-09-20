@@ -44,8 +44,7 @@ This is NOT run as a standalone program. See `attackoftheorcs_v_1_1.py`
 """
 
 class GameUnitError(Exception):
-    """Custom exceptions class for the `AbstractGameUnit` and its subclasses"""
-    
+    """Custom exceptions class for the `AbstractGameUnit` and its subclasses"""    
     def __init__(self, message='', code=000):
         super().__init__(message)
         self.padding = '~'*50 + '\n'
