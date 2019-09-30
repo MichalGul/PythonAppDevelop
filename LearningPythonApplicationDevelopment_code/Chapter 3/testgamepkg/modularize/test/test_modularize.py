@@ -64,6 +64,19 @@ class TestWarGame(unittest.TestCase):
                 #Losing criteria. Player health can not be positive when he losses
                 self.assertFalse(game.player.health_meter > 0)
 
+    def test_occupy_huts(self):
+        game = AttackOfTheOrcs()
+        game.setup_game_scenario()
+
+        # Veryfi that only 5 huts are created
+        self.assertEqual(len(game.huts), 5)
+
+        # Huts occupants must be an instance of the Knight or OrcRider
+        # or it could be set to None
+        for hut in game.huts:
+            assert((hut.occupant is None) or
+                isinstance(hut.occupant, AbstractGameUnit))
+
     def user_input_processor(self, prompt):
         """Simulate user input based on user prompt
         

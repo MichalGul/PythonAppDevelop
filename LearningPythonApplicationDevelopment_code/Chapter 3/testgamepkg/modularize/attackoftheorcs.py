@@ -79,19 +79,23 @@ class AttackOfTheOrcs:
             else:
                 self.huts.append(Hut(i+1, computer_choice))
 
+    def setup_game_scenario(self):
+        """Create player and huts and then occupy huts"""
+        self.player = Knight()
+        self._occupy_huts()
+        self.show_game_mission()
+        self.player.show_health(bold=True)
+
     def play(self):
         """Workhorse method to play the game.
 
         Controls the high level logic to play the game. This is called from
         the main program to begin the game execution.
         """
-        self.player = Knight()
-        self._occupy_huts()
+
+        self.setup_game_scenario()
+
         acquired_hut_counter = 0
-
-        self.show_game_mission()
-        self.player.show_health(bold=True)
-
         while acquired_hut_counter < 5:
             idx = self._process_user_choice()
             self.player.acquire_hut(self.huts[idx-1])
